@@ -3,12 +3,21 @@ class Pessoa:
         self.nome = nome
         self.idade = idade
         self.altura = altura
+    
+    def exercito (self):
+        if self.altura > 1.70:
+            print(f"Parabêns {self.nome} você entrou para o exército\n")
+        else:
+            print(f"Você foi dispensado {self.nome}\n")
 
-def exercito (altura):
-    if altura > 1.70:
-        print("Voce entrou para o exército")
-    else:
-        print("Você foi dispensada")
+    def __str__(self):
+        return f"nome: {self.nome} \nidade: {self.idade} \naltura: {self.altura}\n"
+
 
 pessoa1 = Pessoa("Julio", 18, 1.71)
-exercito(pessoa1.idade)
+pessoa2 = Pessoa("Paulo", 19, 1.69)
+print(pessoa1)
+pessoa1.exercito()
+print(pessoa2)
+pessoa2.exercito()
+
